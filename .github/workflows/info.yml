@@ -1,19 +1,19 @@
-name: System Information
+# name: System Information
 
-on: push
+# on: push
 
-jobs:
-  info:
-    runs-on: ubuntu-latest
-    steps:
-      - name: hostname
-        run: hostname
+# jobs:
+#   info:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: hostname
+#         run: hostname
 
-      - name: user
-        run: whoami
+#       - name: user
+#         run: whoami
 
-      - name: OS
-        run: uname -a
+#       - name: OS
+#         run: uname -a
 
-      - name: Show working directory contents
-        run: ls -la
+#       - name: Show working directory contents
+#         run: ls -la
