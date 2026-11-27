@@ -8,7 +8,7 @@ function createStore() {
       return [...todos];
     },
     add({ title }) {
-      const todo = { id: randomUUID(), title, status: 'TODO' };
+      const todo = { id: randomUUID(), title, status: 'TODO' }; //status was eerst TODO, dan NEW, nu weer
       todos.push(todo);
       return todo;
     },
