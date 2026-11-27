@@ -1,0 +1,29 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Code ophalen
+        uses: actions/checkout@v4
+
+      - name: Node.js 24 installeren
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Dependencies installeren
+        run: npm ci
+
+      - name: Tests doen
+        run: npm test
