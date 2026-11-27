@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  #kan ook zo branches: [main]
   pull_request:
 
 permissions:
@@ -15,15 +16,15 @@ jobs:
 
     steps:
       - name: Code ophalen
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Node.js 24 installeren
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 24
 
-      - name: Dependencies installeren
-        run: npm ci
+      #- name: Dependencies installeren
+      # run: npm ci
 
       - name: Tests doen
         run: npm test
