@@ -1,0 +1,20 @@
+name: System Information
+
+on: push
+
+jobs: 
+   system-info:
+    runs-on: ubuntu-latest
+
+    steps:
+     -name: Show hostname
+      run: hostname
+
+     -name: Show user
+      run:whoami
+
+     -name: Show operating system
+      run: uname -a
+
+     -name: Show working directory contents
+      run:ls -la
